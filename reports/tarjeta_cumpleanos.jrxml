@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tarjeta" pageWidth="300" pageHeight="425" columnWidth="300" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6281d8f1-039e-45c9-b5bb-ca826fd78af8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ID_CLIENTE" class="java.lang.String"/>
+	<parameter name="RUTA_IMAGENES" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT 
+coalesce(per.primer_nombre,'') as primer_nombre,
+coalesce(per.segundo_nombre,'') as segundo_nombre,
+coalesce(per.primer_apellido,'') AS primer_apellido,
+coalesce(per.segundo_apellido,'') as segundo_apellido
+FROM personas per
+WHERE per.numero_identificacion = $P{ID_CLIENTE}
+ORDER BY fecha_nacimiento, primer_nombre, segundo_nombre, primer_apellido]]>
+	</queryString>
+	<field name="primer_nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[Primer nombre]]></fieldDescription>
+	</field>
+	<field name="segundo_nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[Segundo Nombre]]></fieldDescription>
+	</field>
+	<field name="primer_apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[Primer apellido]]></fieldDescription>
+	</field>
+	<field name="segundo_apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[Segundo apellido]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="425" splitType="Stretch">
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="0" y="0" width="300" height="425" uuid="22cd127c-d16a-4ce8-9d31-82d291105830"/>
+				<imageExpression><![CDATA[$P{RUTA_IMAGENES}+"pConfetti-de-cumpleanos.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="24" y="25" width="61" height="48" uuid="122014ac-3170-4d5f-ba42-bbc822789142"/>
+				<imageExpression><![CDATA[$P{RUTA_IMAGENES}+"logo.PNG"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="24" y="372" width="249" height="50" forecolor="#CC0000" uuid="a78e5a09-1f15-4f2d-8f60-a56bf88ec20f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ATT: ONDA FIT"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="214" width="249" height="151" forecolor="#000066" uuid="95d8c6a3-db97-46ce-b8a6-a8f11a7bdbfa"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Comic Sans MS" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Hola "+$F{primer_nombre}+" "+$F{segundo_nombre}+" "+" te deseamos un feliz día lleno de alegria y muchas sorpresas."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

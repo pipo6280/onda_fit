@@ -1,0 +1,150 @@
+0000000000000000000000000000000000000000 6cb48bf690f27ee6b0afad1c06cb465aed491773 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470360006 -0500	clone: from https://github.com/emimaster16/gimnasio.git
+6cb48bf690f27ee6b0afad1c06cb465aed491773 9c75f7971be05a372d6f79c15129ceaa722fa789 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470360093 -0500	commit: 
+9c75f7971be05a372d6f79c15129ceaa722fa789 79223cd800d58b4dd7dd485fdddd1a4b58ea2277 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470361186 -0500	commit: 
+79223cd800d58b4dd7dd485fdddd1a4b58ea2277 f42b09ee0bb0796f22a48b509d487e445d2eb11c Rodolfo Perez Gómez <pipo6280@gmail.com> 1470361511 -0500	commit: 
+f42b09ee0bb0796f22a48b509d487e445d2eb11c f01d258e7257f95c62eaa31283fbee08a5f75265 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470362011 -0500	commit: 
+f01d258e7257f95c62eaa31283fbee08a5f75265 cbaa6e9b4ba89a0f8a4003fc61012f462cd6c6f5 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470364613 -0500	commit: 
+cbaa6e9b4ba89a0f8a4003fc61012f462cd6c6f5 618fb48e7fb9da932f1cf1640b4e9f6a0c5ea343 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470365084 -0500	commit: 
+618fb48e7fb9da932f1cf1640b4e9f6a0c5ea343 d3bf1dc13d56a162ce206bd1ca2d42993e1338f3 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470365788 -0500	commit: 
+d3bf1dc13d56a162ce206bd1ca2d42993e1338f3 e641e58879adc6ce14086f8997c1808a1b72887f Rodolfo Perez Gómez <pipo6280@gmail.com> 1470366050 -0500	commit: 
+e641e58879adc6ce14086f8997c1808a1b72887f 00e2d34caf83cebb4ce6c9394d01b70e3004253b Rodolfo Perez Gómez <pipo6280@gmail.com> 1470366161 -0500	commit: 
+00e2d34caf83cebb4ce6c9394d01b70e3004253b 0b576e6b4be7cd44f8dfeda079b0a70f7cbd0989 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470367024 -0500	commit: 
+0b576e6b4be7cd44f8dfeda079b0a70f7cbd0989 2de52687956f841b19be7aa4763c953e8e05e16a Rodolfo Perez Gómez <pipo6280@gmail.com> 1470443690 -0500	merge origin/master: Fast-forward
+2de52687956f841b19be7aa4763c953e8e05e16a 54c49b52d841449824fc1bedf4ba10450e3282cd Rodolfo Perez Gómez <pipo6280@gmail.com> 1470443915 -0500	commit: 
+54c49b52d841449824fc1bedf4ba10450e3282cd d400f097be3db884436a76982dd16cdad278c5ad Rodolfo Perez Gómez <pipo6280@gmail.com> 1470444506 -0500	commit: 
+d400f097be3db884436a76982dd16cdad278c5ad 178ecf94a31d7e4ec68ef806958c988602e0c25d Rodolfo Perez Gómez <pipo6280@gmail.com> 1470452034 -0500	merge origin/master: Fast-forward
+178ecf94a31d7e4ec68ef806958c988602e0c25d 2994329bdde1d41f74559dc26428cc4292d678f9 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470452100 -0500	merge origin/master: Fast-forward
+2994329bdde1d41f74559dc26428cc4292d678f9 6c48fb2e9570b0cede34c71d97867184ca0e5203 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470454240 -0500	commit: 
+6c48fb2e9570b0cede34c71d97867184ca0e5203 38071b45da9dcdc697073deb97602f1051787d7f Rodolfo Perez Gómez <pipo6280@gmail.com> 1470454622 -0500	commit: 
+38071b45da9dcdc697073deb97602f1051787d7f 8d61cf642cdd47adfd01fbe456453bcfc2e96b3b Rodolfo Perez Gómez <pipo6280@gmail.com> 1470454854 -0500	commit: 
+8d61cf642cdd47adfd01fbe456453bcfc2e96b3b 2ca192619445555dcd1ae83953659b126b4a6ec2 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470511410 -0500	rebase finished: refs/heads/master onto caf184d79a9853c7b7eb51ea32cc405496b597df
+2ca192619445555dcd1ae83953659b126b4a6ec2 1d91d44663d0d30afb40aa600dea05d1d19ff351 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470512143 -0500	commit: ajuste para conflicto de archivos
+1d91d44663d0d30afb40aa600dea05d1d19ff351 6268a97af57e3aee4155df1b2dc6056b55a20a1a Rodolfo Perez Gómez <pipo6280@gmail.com> 1470512497 -0500	commit: ajuste para conflicto de archivos
+6268a97af57e3aee4155df1b2dc6056b55a20a1a e6f333f5ecdd1f393ce2f1b6ca7d77e978de9128 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470513679 -0500	merge origin/master: Fast-forward
+e6f333f5ecdd1f393ce2f1b6ca7d77e978de9128 e6ca46943e30bf87b572e3b5fffc89e65d6c06fd Rodolfo Perez Gómez <pipo6280@gmail.com> 1470513823 -0500	commit: se crean los nuevos modelos
+e6ca46943e30bf87b572e3b5fffc89e65d6c06fd a01677369aa694fe9a2c4763acf4206a653d0698 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470513968 -0500	commit: se eliminan el hibernate
+a01677369aa694fe9a2c4763acf4206a653d0698 2c3afa9e822e2b82c53633f6632be959823ba2e1 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470514423 -0500	commit: se eliminan el hibernate
+2c3afa9e822e2b82c53633f6632be959823ba2e1 8843ac1f7c889eeacfd004b6edd17f97f5c2b3cd Rodolfo Perez Gómez <pipo6280@gmail.com> 1470516874 -0500	commit: ajuste
+8843ac1f7c889eeacfd004b6edd17f97f5c2b3cd 37dbae734e6c04a0129d07ee1abf5a119ffe7194 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470517235 -0500	merge origin/master: Fast-forward
+37dbae734e6c04a0129d07ee1abf5a119ffe7194 e4806cd8521c8efea90122cd38688fe91240ce2e Rodolfo Perez Gómez <pipo6280@gmail.com> 1470517522 -0500	commit: ya estupido gay
+e4806cd8521c8efea90122cd38688fe91240ce2e 2763910e3da922d2fc4b128961c3df9c158f3664 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470517839 -0500	commit: fin descuentos
+2763910e3da922d2fc4b128961c3df9c158f3664 ac32aef801f0859b276bf191ced33afe0abacb8a Rodolfo Perez Gómez <pipo6280@gmail.com> 1470518873 -0500	commit: ajuste de diseño
+ac32aef801f0859b276bf191ced33afe0abacb8a 991f4ad518edbbeeb8396cddc2c9554b1d1ba45d Rodolfo Perez Gómez <pipo6280@gmail.com> 1470519962 -0500	commit: modulo de productos
+991f4ad518edbbeeb8396cddc2c9554b1d1ba45d 41819042c265537dffb6c79cad7dee35188c0795 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470519981 -0500	commit: modulo de productos
+41819042c265537dffb6c79cad7dee35188c0795 b0e542289fce6d11ca4e0f706b5bf5d80d4d10fe Rodolfo Perez Gómez <pipo6280@gmail.com> 1470520080 -0500	rebase finished: refs/heads/master onto 22a41458d1ef33a70df433241a0b57e9fcf2edf6
+b0e542289fce6d11ca4e0f706b5bf5d80d4d10fe 804118a918253cbca28849e16403ac486d30bf8d Rodolfo Perez Gómez <pipo6280@gmail.com> 1470523235 -0500	commit: modulo de productos
+804118a918253cbca28849e16403ac486d30bf8d add464e668d00ecb8b3a94545a78ff507ab719c5 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470530252 -0500	commit: modulo de productos
+add464e668d00ecb8b3a94545a78ff507ab719c5 0073770f908317f65cdd5cb22510df8a13479913 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470531250 -0500	commit: modulo de productos
+0073770f908317f65cdd5cb22510df8a13479913 7bb7933a7fb3ce5b7119ac604284ef27124e7969 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470583778 -0500	merge origin/master: Fast-forward
+7bb7933a7fb3ce5b7119ac604284ef27124e7969 12619de5c732acee129b8f2132ce6e0e588758dc Rodolfo Perez Gómez <pipo6280@gmail.com> 1470583796 -0500	commit: modulo de productos
+12619de5c732acee129b8f2132ce6e0e588758dc 3c74eb828626690109539685613d016d6d2837f9 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470584749 -0500	merge origin/master: Fast-forward
+3c74eb828626690109539685613d016d6d2837f9 6864d0b890ef385e096a61a05585e04533962f40 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470585169 -0500	merge origin/master: Fast-forward
+6864d0b890ef385e096a61a05585e04533962f40 228d67874502609492faeaf2d530480ea8246ab5 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470585491 -0500	commit: ajuste para el paso del usuario Dto
+228d67874502609492faeaf2d530480ea8246ab5 46b2013e981086184f7bc1129bbe0e1a61562008 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470585873 -0500	commit: ajuste para el paso del usuario Dto
+46b2013e981086184f7bc1129bbe0e1a61562008 4cda89e0765dc2d6fa158cc3d913888534ffd50f Rodolfo Perez Gómez <pipo6280@gmail.com> 1470585919 -0500	commit: ajuste para el paso del usuario Dto
+4cda89e0765dc2d6fa158cc3d913888534ffd50f bd0e4ca4e1a24fbc920069f38d76c6c3f86eb93f Rodolfo Perez Gómez <pipo6280@gmail.com> 1470588670 -0500	commit: ajuste para el paso del usuario Dto
+bd0e4ca4e1a24fbc920069f38d76c6c3f86eb93f ac73ac4379663093bfa0441ab5c827bac4f90811 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470599787 -0500	merge origin/master: Fast-forward
+ac73ac4379663093bfa0441ab5c827bac4f90811 0fcec7d6fefef5cec1241c3322f1ce536623cb8c Rodolfo Perez Gómez <pipo6280@gmail.com> 1470601430 -0500	commit: formulario fiioterapia
+0fcec7d6fefef5cec1241c3322f1ce536623cb8c e2b7ee0a965aef63cfd20041792d1f8df689475d Rodolfo Perez Gómez <pipo6280@gmail.com> 1470601568 -0500	merge origin/master: Fast-forward
+e2b7ee0a965aef63cfd20041792d1f8df689475d b10c99d1ccd929e659e14ef83383e05693c02552 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470603437 -0500	commit: formulario fiioterapia
+b10c99d1ccd929e659e14ef83383e05693c02552 9d2968828ce2df80b44f03ae7428095d406984ed Rodolfo Perez Gómez <pipo6280@gmail.com> 1470604126 -0500	commit: formulario fiioterapia
+9d2968828ce2df80b44f03ae7428095d406984ed d1dc6f4cc287ba745596a112440af7ab19e1a5cd Rodolfo Perez Gómez <pipo6280@gmail.com> 1470604227 -0500	commit: formulario fiioterapia
+d1dc6f4cc287ba745596a112440af7ab19e1a5cd 40530f75925bdcfcc61e0d649321779504848909 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470607842 -0500	commit: formulario fiioterapia
+40530f75925bdcfcc61e0d649321779504848909 a7e25d953e07ccfd68f64cc724f575de8ba3887f Rodolfo Perez Gómez <pipo6280@gmail.com> 1470608375 -0500	commit: formulario fiioterapia
+a7e25d953e07ccfd68f64cc724f575de8ba3887f a9c573b3ed21b94a67e6d28a4c745a1ab02d422c Rodolfo Perez Gómez <pipo6280@gmail.com> 1470709750 -0500	merge origin/master: Fast-forward
+a9c573b3ed21b94a67e6d28a4c745a1ab02d422c fd69de54cf1e3aee9ec1d90449607e6ce0930ef2 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470710229 -0500	merge origin/master: Fast-forward
+fd69de54cf1e3aee9ec1d90449607e6ce0930ef2 9cfed3120c2876f61809d1d44b24f374069fe367 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470711339 -0500	commit: formulario fiioterapia
+9cfed3120c2876f61809d1d44b24f374069fe367 2f77e05b3990e069c3d2bd63aeaac012772aedfb Rodolfo Perez Gómez <pipo6280@gmail.com> 1470712456 -0500	merge origin/master: Fast-forward
+2f77e05b3990e069c3d2bd63aeaac012772aedfb 8109464a1d2937aeb9d8df1fea95e685ab0dd891 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470713840 -0500	commit: ajustes calcuo imc
+8109464a1d2937aeb9d8df1fea95e685ab0dd891 4e4f692289786185d70e39cb28d9239992c29a6b Rodolfo Perez Gómez <pipo6280@gmail.com> 1470766452 -0500	commit: ajustes calcuo imc
+4e4f692289786185d70e39cb28d9239992c29a6b 3e30de73921e50ec9256180cffa4c6b6e7e25280 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470797414 -0500	merge origin/master: Fast-forward
+3e30de73921e50ec9256180cffa4c6b6e7e25280 e1a56d7a8c9b0780cdb846d561ad057078b2bb47 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470799699 -0500	commit: jackson pollock
+e1a56d7a8c9b0780cdb846d561ad057078b2bb47 41078ad6c68dad1be63bcd8ce624c2e7b62c1b5e Rodolfo Perez Gómez <pipo6280@gmail.com> 1470853141 -0500	merge origin/master: Fast-forward
+41078ad6c68dad1be63bcd8ce624c2e7b62c1b5e dc91c1d30308711e8885c12efe8bb2fc6447385c Rodolfo Perez Gómez <pipo6280@gmail.com> 1470853175 -0500	commit: jackson pollock
+dc91c1d30308711e8885c12efe8bb2fc6447385c 295c5ec4e948ccabe547c1f329538cddbdcff3dc Rodolfo Perez Gómez <pipo6280@gmail.com> 1470886344 -0500	commit: jackson pollock
+295c5ec4e948ccabe547c1f329538cddbdcff3dc 4470e9aad5d49dcd547deccd371d398e4eef9a91 Rodolfo Perez Gómez <pipo6280@gmail.com> 1470939492 -0500	commit: jackson pollock
+4470e9aad5d49dcd547deccd371d398e4eef9a91 ce618790adce7fc38c004211a06b5171534b023e Rodolfo Perez Gómez <pipo6280@gmail.com> 1471007101 -0500	commit: busqueda de clientes
+ce618790adce7fc38c004211a06b5171534b023e 3b96bda1b663227495597522c0f341ac6a6ad85b Rodolfo Perez Gómez <pipo6280@gmail.com> 1471008387 -0500	merge origin/master: Fast-forward
+3b96bda1b663227495597522c0f341ac6a6ad85b b58280aa410f1757ef287636a3b2e65dc9d2eee1 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471009179 -0500	commit: busqueda de clientes
+b58280aa410f1757ef287636a3b2e65dc9d2eee1 9ef8aca3dfef47b1700b58b9a893ea6710d592e0 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471011400 -0500	commit: busqueda de clientes
+9ef8aca3dfef47b1700b58b9a893ea6710d592e0 d5060544a4ca98bb6e5bcf7e120c25cda63f36ef Rodolfo Perez Gómez <pipo6280@gmail.com> 1471011771 -0500	merge origin/master: Fast-forward
+d5060544a4ca98bb6e5bcf7e120c25cda63f36ef 826206deeeb418a535272dfa3665fceefa31c910 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471012407 -0500	commit: busqueda de clientes
+826206deeeb418a535272dfa3665fceefa31c910 732c75f3c09b177822a31f9b9deefe758ff7177b Rodolfo Perez Gómez <pipo6280@gmail.com> 1471012857 -0500	merge origin/master: Fast-forward
+732c75f3c09b177822a31f9b9deefe758ff7177b 71e91126be83c5715814956074fb41613c9d8077 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471012880 -0500	commit: busqueda de clientes
+71e91126be83c5715814956074fb41613c9d8077 ed39991f2deb84a24d604bf39c69d7add36104a5 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471013063 -0500	commit: busqueda de clientes
+ed39991f2deb84a24d604bf39c69d7add36104a5 1c2e7689e09eee85eea0d67012bb873431400eb3 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471019310 -0500	commit: busqueda de clientes
+1c2e7689e09eee85eea0d67012bb873431400eb3 dab8e023b2bd79b2b71dd9b730136c90efe17005 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471023903 -0500	commit: busqueda de clientes
+dab8e023b2bd79b2b71dd9b730136c90efe17005 2adda218f692c1e2bc9e1475f88bc274ead222c9 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471029507 -0500	merge origin/master: Fast-forward
+2adda218f692c1e2bc9e1475f88bc274ead222c9 7ecf3c4f863939ce594f44f6dcfdb2eeb38543ce Rodolfo Perez Gómez <pipo6280@gmail.com> 1471031349 -0500	commit: busqueda de clientes
+7ecf3c4f863939ce594f44f6dcfdb2eeb38543ce dee7fc8e5318ef10a0c40081ac540b39ee0c7f04 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471031686 -0500	commit: busqueda de clientes
+dee7fc8e5318ef10a0c40081ac540b39ee0c7f04 13f96bcd948be319ada337c317baf552b4f43109 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471041362 -0500	merge origin/master: Fast-forward
+13f96bcd948be319ada337c317baf552b4f43109 56cd4eac47420507bcb0110bf057583faabccb91 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471042464 -0500	merge origin/master: Fast-forward
+56cd4eac47420507bcb0110bf057583faabccb91 b99c94780563b27ffe3671823ac7e21bb853f6e5 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471048207 -0500	merge origin/master: Fast-forward
+b99c94780563b27ffe3671823ac7e21bb853f6e5 b2a38f28a68d941a110b62b0c98feb4875302cf4 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471056381 -0500	merge origin/master: Fast-forward
+b2a38f28a68d941a110b62b0c98feb4875302cf4 ba2cb89793f7af6d35a2b739072b14394f4a1cb1 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471056713 -0500	merge origin/master: Fast-forward
+ba2cb89793f7af6d35a2b739072b14394f4a1cb1 8c80dcff2f0ca5df7cee8f5f37da6f7088ea8ef1 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471058835 -0500	merge origin/master: Fast-forward
+8c80dcff2f0ca5df7cee8f5f37da6f7088ea8ef1 12901f4dbec0d1d26230bbc9bfdac3f82820da6f Rodolfo Perez Gómez <pipo6280@gmail.com> 1471101287 -0500	merge origin/master: Fast-forward
+12901f4dbec0d1d26230bbc9bfdac3f82820da6f 8b16526420c26c06484bec4956f94749be093d68 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471106841 -0500	commit: busqueda de clientes
+8b16526420c26c06484bec4956f94749be093d68 8b3b5ef83556bcc89dc4c5b20ffa85feb44193ff Rodolfo Perez Gómez <pipo6280@gmail.com> 1471107981 -0500	commit: busqueda de clientes
+8b3b5ef83556bcc89dc4c5b20ffa85feb44193ff a7ad5caf6038220b8971e3b7585ff87e2b2a8dd4 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471108310 -0500	commit: busqueda de clientes
+a7ad5caf6038220b8971e3b7585ff87e2b2a8dd4 c719dd8fd89b60a1b581a31cdc4a5612ab054070 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471111428 -0500	merge origin/master: Fast-forward
+c719dd8fd89b60a1b581a31cdc4a5612ab054070 76fa67fca187188d6cda8ebd154d5e8bfa0e8684 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471112229 -0500	merge origin/master: Fast-forward
+76fa67fca187188d6cda8ebd154d5e8bfa0e8684 a260863289c692b14ba510a9a4602dffe618fd1d Rodolfo Perez Gómez <pipo6280@gmail.com> 1471112745 -0500	merge origin/master: Fast-forward
+a260863289c692b14ba510a9a4602dffe618fd1d 1cb732bfc0dfad0a3b459d435e796dc02a6ed3a3 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471113202 -0500	merge origin/master: Fast-forward
+1cb732bfc0dfad0a3b459d435e796dc02a6ed3a3 0752d5552152edf6dd50149615ea236f71179330 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471114489 -0500	merge origin/master: Fast-forward
+0752d5552152edf6dd50149615ea236f71179330 dd6d863f2149bc835388f4c8cdaa603ae4b2c9e5 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471400721 -0500	merge origin/master: Fast-forward
+dd6d863f2149bc835388f4c8cdaa603ae4b2c9e5 f9ef2505ece1ab5b000ec4559c0fad7721f11ee2 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471479585 -0500	merge origin/master: Fast-forward
+f9ef2505ece1ab5b000ec4559c0fad7721f11ee2 33960ba5669bc20458577511e64580e48fb6aa47 Rodolfo Perez Gómez <pipo6280@gmail.com> 1471480918 -0500	commit: ajuste par al foto en registrar pagos 
+33960ba5669bc20458577511e64580e48fb6aa47 6f01ae4cfc81dc1b8987f6bb2cfed5a36bb15c7d Rodolfo Perez Gómez <pipo6280@gmail.com> 1471484503 -0500	commit: ajuste par al foto en registrar pagos
+6f01ae4cfc81dc1b8987f6bb2cfed5a36bb15c7d 5ee4a81419a7c9758c8dad2a0ae553bfe2119b66 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472004887 -0500	commit: ajuste par al foto en registrar pagos
+5ee4a81419a7c9758c8dad2a0ae553bfe2119b66 ac1ba0076c6244b4672e7c7a29549e8be50b0b95 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472091372 -0500	commit: ajuste par al foto en registrar pagos
+ac1ba0076c6244b4672e7c7a29549e8be50b0b95 07cd37faf16418e4cbddb10698cedd770fba18bf Rodolfo Perez Gómez <pipo6280@gmail.com> 1472093829 -0500	commit: ajuste par al foto en registrar pagos
+07cd37faf16418e4cbddb10698cedd770fba18bf 01bdbf5915af7fbe11fc422a62d74656c8ed93ce Rodolfo Perez Gómez <pipo6280@gmail.com> 1472326235 -0500	commit: ajuste par al foto en registrar pagos
+01bdbf5915af7fbe11fc422a62d74656c8ed93ce 0839a90752b9756f6b796974640e519e4059e7b0 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472329863 -0500	commit: ajuste par al foto en registrar pagos
+0839a90752b9756f6b796974640e519e4059e7b0 1ac767e959a4872337a8a90498405cb4dfc6e400 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472330534 -0500	commit: ajuste par al foto en registrar pagos
+1ac767e959a4872337a8a90498405cb4dfc6e400 47bd05f7efedd84e2c07083d6a6b10e0aa7d87a4 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472331015 -0500	commit: ajuste par al foto en registrar pagos
+47bd05f7efedd84e2c07083d6a6b10e0aa7d87a4 3a2484363d49e9630fda81d64493916e3ef75391 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472336162 -0500	commit: ajuste par al foto en registrar pagos
+3a2484363d49e9630fda81d64493916e3ef75391 a69ae8796b6f8d0b1ee9ba09f6c57ea868fde896 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472340601 -0500	commit: ajuste par al foto en registrar pagos
+a69ae8796b6f8d0b1ee9ba09f6c57ea868fde896 837d1eca39b3dba0358ad0903747a1fb55ea88df Rodolfo Perez Gómez <pipo6280@gmail.com> 1472341048 -0500	commit: ajuste par al foto en registrar pagos
+837d1eca39b3dba0358ad0903747a1fb55ea88df 72f1be877659e70e2a61428e1b27e0440f883384 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472390517 -0500	merge origin/master: Fast-forward
+72f1be877659e70e2a61428e1b27e0440f883384 c66afd1f1e0b209f9fb99d660d0c9a945841f0e6 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472391482 -0500	merge origin/master: Fast-forward
+c66afd1f1e0b209f9fb99d660d0c9a945841f0e6 7f090329c1a744c9a9473d08b32f821ea230460d Rodolfo Perez Gómez <pipo6280@gmail.com> 1472392480 -0500	commit: ajuste par al foto en registrar pagos
+7f090329c1a744c9a9473d08b32f821ea230460d 8f2df23598c7cc6761bced5db591c03ba49077ce Rodolfo Perez Gómez <pipo6280@gmail.com> 1472392648 -0500	commit: ajuste par al foto en registrar pagos
+8f2df23598c7cc6761bced5db591c03ba49077ce 685ebf2bf27c15309867ad7c1dc69d570b5f84a4 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472396424 -0500	merge origin/master: Fast-forward
+685ebf2bf27c15309867ad7c1dc69d570b5f84a4 b96fa830ca0ee65404adf379e8501c23bb884af6 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472396544 -0500	commit: ajuste par al foto en registrar pagos
+b96fa830ca0ee65404adf379e8501c23bb884af6 26be9587a744e090770ed4f048972317398ac4e6 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472400126 -0500	commit: ajuste par al foto en registrar pagos
+26be9587a744e090770ed4f048972317398ac4e6 1d54917027d0d63a626daabd15aefba3adc387d3 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472401957 -0500	commit: ajuste par al foto en registrar pagos
+1d54917027d0d63a626daabd15aefba3adc387d3 e72573c394908ef5ec608a6da03414d8ae556086 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472403834 -0500	merge origin/master: Fast-forward
+e72573c394908ef5ec608a6da03414d8ae556086 6920f2963abb283ce10389b4f809dc9bb22035e9 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472403947 -0500	commit: ajuste par al foto en registrar pagos
+6920f2963abb283ce10389b4f809dc9bb22035e9 70e5c2e3c3e2cf945dbabfbfae31d9bbfcb298d4 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472493186 -0500	merge origin/master: Fast-forward
+70e5c2e3c3e2cf945dbabfbfae31d9bbfcb298d4 3c53f55f05d7416b6937836c70955f6f329a4d2a Rodolfo Perez Gómez <pipo6280@gmail.com> 1472494401 -0500	merge origin/master: Fast-forward
+3c53f55f05d7416b6937836c70955f6f329a4d2a eeabbc6a479adb2cf95aceac16d39a15bc7934aa Rodolfo Perez Gómez <pipo6280@gmail.com> 1472494414 -0500	commit: ajuste par al foto en registrar pagos
+eeabbc6a479adb2cf95aceac16d39a15bc7934aa 981b9e8837dbe9616ef0a9a326abdcbf640962ba Rodolfo Perez Gómez <pipo6280@gmail.com> 1472495419 -0500	commit: ajuste par al foto en registrar pagos
+981b9e8837dbe9616ef0a9a326abdcbf640962ba dc020fdb5c35d6f545217047638eabb816f47f85 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472527232 -0500	commit: ajuste par al foto en registrar pagos
+dc020fdb5c35d6f545217047638eabb816f47f85 18b76383ada43a94cdaff10cc7a7477cae5174e8 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472527274 -0500	rebase finished: refs/heads/master onto b1da8e0921f541b473e29f828786c2d32140d677
+18b76383ada43a94cdaff10cc7a7477cae5174e8 e2db0460821ed4ff1f2b5db7f21af5284ef56213 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472527774 -0500	merge origin/master: Merge made by recursive.
+e2db0460821ed4ff1f2b5db7f21af5284ef56213 06f71f3268f90c3466bbebf393823756b085c6b1 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472689164 -0500	rebase finished: refs/heads/master onto 362b8eb9c925c20d712ac4a438e4829640aafa32
+06f71f3268f90c3466bbebf393823756b085c6b1 bade174bff5d59f043e68e572ad3e829ab250798 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472689425 -0500	commit: ajuste par al foto en registrar pagos
+bade174bff5d59f043e68e572ad3e829ab250798 d4390a6f80f752fc6cedbac30d7ff90a2aec614a Rodolfo Perez Gómez <pipo6280@gmail.com> 1472690417 -0500	commit: ajuste par al foto en registrar pagos
+d4390a6f80f752fc6cedbac30d7ff90a2aec614a c2dd154e454752b0d3588319e96bab90a0eddf86 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472694432 -0500	commit: ajuste par al foto en registrar pagos
+c2dd154e454752b0d3588319e96bab90a0eddf86 e95c7aaecc4309e6a113d0189a3cbb7951e30c1a Rodolfo Perez Gómez <pipo6280@gmail.com> 1472696438 -0500	commit: ajuste par al foto en registrar pagos
+e95c7aaecc4309e6a113d0189a3cbb7951e30c1a 25e15bd864af45da64722b76e1a20ba8ec887571 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472782029 -0500	commit: ajuste par al foto en registrar pagos
+25e15bd864af45da64722b76e1a20ba8ec887571 c7d742de45fd88af38452db5ed20827baef448ed Rodolfo Perez Gómez <pipo6280@gmail.com> 1472786624 -0500	commit: ajuste par al foto en registrar pagos
+c7d742de45fd88af38452db5ed20827baef448ed 23af12b991dbaf805b0bd30953a78331ed0d9dfa Rodolfo Perez Gómez <pipo6280@gmail.com> 1472917281 -0500	merge origin/master: Fast-forward
+23af12b991dbaf805b0bd30953a78331ed0d9dfa a94baca3a2f0d75437ec292dc706f25b913b92f2 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472917300 -0500	commit: ajuste par al foto en registrar pagos
+a94baca3a2f0d75437ec292dc706f25b913b92f2 f24fd5cece22c183ba061994ea8635a41943c0a3 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472920820 -0500	commit: ajuste par al foto en registrar pagos
+f24fd5cece22c183ba061994ea8635a41943c0a3 4eb55c3a762d7451f264ceb0f1c775894e922687 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472921838 -0500	commit: ajuste par al foto en registrar pagos
+4eb55c3a762d7451f264ceb0f1c775894e922687 8c8a79069d66505be0a9491ab74a9404d1dd572b Rodolfo Perez Gómez <pipo6280@gmail.com> 1472923365 -0500	commit: ajuste par al foto en registrar pagos
+8c8a79069d66505be0a9491ab74a9404d1dd572b 23066cf5e69ea2535692284f77cc12d5dc2773e4 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472923656 -0500	commit: ajuste par al foto en registrar pagos
+23066cf5e69ea2535692284f77cc12d5dc2773e4 aeb84b1698314d14ea54453674f75d6c7f2c4d2d Rodolfo Perez Gómez <pipo6280@gmail.com> 1472931210 -0500	merge origin/master: Fast-forward
+aeb84b1698314d14ea54453674f75d6c7f2c4d2d 2f76620e7d765f17e6ecf5e959b562561ea7d61e Rodolfo Perez Gómez <pipo6280@gmail.com> 1473019603 -0500	commit: ajuste par al foto en registrar pagos
+2f76620e7d765f17e6ecf5e959b562561ea7d61e 8ea6d8085c6b3e311f4d34cc4ef1d6e259554964 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472934428 -0500	commit: ajuste par al foto en registrar pagos
+8ea6d8085c6b3e311f4d34cc4ef1d6e259554964 f22b7d045b17ea573952cb44c16d51c84acb7ac8 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472936512 -0500	merge origin/master: Fast-forward
+f22b7d045b17ea573952cb44c16d51c84acb7ac8 b0d66cd4e1f62fc4f8d8462f8d71de6efd610ba0 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472939210 -0500	merge origin/master: Fast-forward
+b0d66cd4e1f62fc4f8d8462f8d71de6efd610ba0 a78deee178a9ae996283ede1841f4a06038efacd Rodolfo Perez Gómez <pipo6280@gmail.com> 1472943544 -0500	merge origin/master: Fast-forward
+a78deee178a9ae996283ede1841f4a06038efacd 7c17c8f211c8805d2076ff1899dba885ce919238 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472944331 -0500	commit: ajuste par al foto en registrar pagos
+7c17c8f211c8805d2076ff1899dba885ce919238 2b5791053c4964d72c9e8122b6cd557e26b7f137 Rodolfo Perez Gómez <pipo6280@gmail.com> 1472992763 -0500	commit: ajuste par al foto en registrar pagos
+2b5791053c4964d72c9e8122b6cd557e26b7f137 6631f330b80e8b47342de7e16325e491987d6f58 Rodolfo Perez Gómez <pipo6280@gmail.com> 1473044881 -0500	commit: ajuste par al foto en registrar pagos
+6631f330b80e8b47342de7e16325e491987d6f58 b5a79832f71234a7ef01c8cfd7b7ff375e3a06e2 Rodolfo Perez Gómez <pipo6280@gmail.com> 1473215984 -0500	commit: ajuste par al foto en registrar pagos
+b5a79832f71234a7ef01c8cfd7b7ff375e3a06e2 1e527fb89bf243070651db114f290c08380b2495 Rodolfo Perez Gómez <pipo6280@gmail.com> 1473216448 -0500	commit: ajuste par al foto en registrar pagos
+1e527fb89bf243070651db114f290c08380b2495 aa549ee2387cc3d2a675d02c6ebfcda1bb36ecc9 Rodolfo Perez Gómez <pipo6280@gmail.com> 1473216783 -0500	commit: ajuste par al foto en registrar pagos

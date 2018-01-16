@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc242e45-ef86-485a-b55e-639d41ecf6ff">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="paquetes" uuid="a605538e-a551-428b-91b2-d6609da80f87">
+		<parameter name="FECHA_INICIO" class="java.lang.String"/>
+		<parameter name="FECHA_FIN" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT 
+clp.id,
+coalesce(clp.valor_total,0) as valor_total,
+coalesce(per.primer_nombre,'') as primer_nombre,
+coalesce(per.segundo_nombre,'') as segundo_nombre,
+coalesce(per.primer_apellido,'') AS primer_apellido,
+coalesce(per.segundo_apellido,'') as segundo_apellido,
+coalesce(paq.nombre,'') as nombre,
+concat( IF (DAY(clp.fecha_registro)< 10,CONCAT("0",DAY(clp.fecha_registro)),DAY(clp.fecha_registro) ),"-",IF(MONTH(clp.fecha_registro) < 10,CONCAT("0",MONTH(clp.fecha_registro)),MONTH(clp.fecha_registro)),"-",YEAR(clp.fecha_registro)) as fecha,
+coalesce((SELECT sum(clp.valor_total) from cliente_paquete clp WHERE  clp.fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00") AND clp.fecha_registro <= CONCAT($P{FECHA_FIN}," 23:59:59") ),0) as total
+FROM 
+cliente_paquete clp
+INNER JOIN clientes cl
+ON cl.id = clp.cliente_id
+INNER JOIN personas per
+ON per.id = cl.persona_id
+INNER JOIN paquetes paq
+ON paq.id = clp.paquete_id
+WHERE clp.fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00") AND clp.fecha_registro <= CONCAT($P{FECHA_FIN}," 23:59:59")]]>
+		</queryString>
+		<field name="id" class="java.math.BigInteger">
+			<fieldDescription><![CDATA[Id principal]]></fieldDescription>
+		</field>
+		<field name="valor_total" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[Valor total del paquete con descuento]]></fieldDescription>
+		</field>
+		<field name="primer_nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[Primer nombre]]></fieldDescription>
+		</field>
+		<field name="segundo_nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[Segundo Nombre]]></fieldDescription>
+		</field>
+		<field name="primer_apellido" class="java.lang.String">
+			<fieldDescription><![CDATA[Primer apellido]]></fieldDescription>
+		</field>
+		<field name="segundo_apellido" class="java.lang.String">
+			<fieldDescription><![CDATA[Segundo apellido]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[Nombre del descuento]]></fieldDescription>
+		</field>
+		<field name="fecha" class="java.lang.String"/>
+		<field name="total" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="cafeteria" uuid="8ab7aca6-8dca-469c-bf8d-2e9259541b22">
+		<parameter name="FECHA_INICIO" class="java.lang.String"/>
+		<parameter name="FECHA_FIN" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT 
+ven.id,
+coalesce(ven.valor_total,0) as valor_total,
+coalesce(ven.cantidad,0) as cantidad,
+coalesce(prd.nombre,"")as nombre,
+concat( IF (DAY(ven.fecha_registro)< 10,CONCAT("0",DAY(ven.fecha_registro)),DAY(ven.fecha_registro) ),"-",IF(MONTH(ven.fecha_registro) < 10,CONCAT("0",MONTH(ven.fecha_registro)),MONTH(ven.fecha_registro)),"-",YEAR(ven.fecha_registro)) as fecha,
+coalesce((SELECT sum(ven.valor_total) FROM producto_ventas ven WHERE ven.fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00" ) and  ven.fecha_registro <= CONCAT($P{FECHA_FIN}," 23:59:59") ),0) as total
+FROM
+producto_ventas ven
+INNER JOIN productos prd
+ON prd.id = ven.productos_id
+WHERE ven.fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00") and  ven.fecha_registro <= CONCAT($P{FECHA_FIN}," 23:59:59")]]>
+		</queryString>
+		<field name="id" class="java.math.BigInteger">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="valor_total" class="java.lang.Double">
+			<fieldDescription><![CDATA[Valor total del paquete con descuento]]></fieldDescription>
+		</field>
+		<field name="cantidad" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[Nombre del descuento]]></fieldDescription>
+		</field>
+		<field name="fecha" class="java.lang.String"/>
+		<field name="total" class="java.lang.Double"/>
+		<group name="id">
+			<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="gastos" uuid="c609de56-57c3-4b9c-ad30-073f227d0a6b">
+		<parameter name="FECHA_FIN" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="FECHA_INICIO" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT 
+g.id,
+coalesce(g.descripcion,'') as nombre,
+coalesce(g.valor,0) as valor,
+concat( IF (DAY(g.fecha_registro)< 10,CONCAT("0",DAY(g.fecha_registro)),DAY(g.fecha_registro) ),"-",IF(MONTH(g.fecha_registro) < 10,CONCAT("0",MONTH(g.fecha_registro)),MONTH(g.fecha_registro)),"-",YEAR(g.fecha_registro))  as fecha,
+coalesce((SELECT sum(gas.valor) from gastos gas WHERE  gas.fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00" ) AND gas.fecha_registro <= CONCAT($P{FECHA_FIN}, ' 23:59:59' ) ),0) as total
+FROM 
+gastos g
+WHERE g.fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00" ) AND g.fecha_registro <= CONCAT($P{FECHA_FIN}, ' 23:59:59' )]]>
+		</queryString>
+		<field name="id" class="java.math.BigInteger">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[Nombre del descuento]]></fieldDescription>
+		</field>
+		<field name="valor" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="fecha" class="java.lang.String"/>
+		<field name="total" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="FECHA_INICIO" class="java.lang.String"/>
+	<parameter name="FECHA_FIN" class="java.lang.String"/>
+	<parameter name="RUTA_IMAGENES" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select  
+coalesce((SELECT sum(clp.valor_total) from cliente_paquete clp WHERE clp.fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00" ) AND  clp.fecha_registro <= CONCAT($P{FECHA_FIN}," 23:59:59") ),0) as total_paquetes,
+coalesce((SELECT sum(valor_total) FROM producto_ventas WHERE fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00" ) AND fecha_registro <= CONCAT($P{FECHA_FIN}," 23:59:59") ),0) as total_cafeteria,
+coalesce((SELECT sum(valor) FROM gastos WHERE fecha_registro >= CONCAT($P{FECHA_INICIO}, " 00:00:00" ) AND fecha_registro <= CONCAT($P{FECHA_FIN}," 23:59:59") ),0) as total_gastos]]>
+	</queryString>
+	<field name="total_paquetes" class="java.math.BigDecimal"/>
+	<field name="total_cafeteria" class="java.lang.Double"/>
+	<field name="total_gastos" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch">
+			<image>
+				<reportElement x="4" y="0" width="58" height="51" uuid="32a40aaa-98ad-4701-8123-a503b9f55e0b"/>
+				<imageExpression><![CDATA[$P{RUTA_IMAGENES}+"logo.PNG"]]></imageExpression>
+			</image>
+			<rectangle radius="10">
+				<reportElement x="58" y="0" width="497" height="51" backcolor="#3366FF" uuid="ebc579e1-cf17-4ad3-8e3f-c26180c67d12"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#999999"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="58" y="0" width="200" height="51" forecolor="#FFFFFF" uuid="67ce0f11-8e82-4f9c-b8d2-f37a08e5e884"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Cierre de caja ]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="258" y="0" width="297" height="51" forecolor="#FFFFFF" backcolor="#0066CC" uuid="54668f9f-ca3d-4c11-85e4-2ff9354653b7"/>
+				<box>
+					<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_INICIO}+"<br>"+$P{FECHA_FIN}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="299" y="0" width="97" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="f529af33-435a-48c9-9b74-33c54f068cd8"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Paquete"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="396" y="0" width="159" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="bb0e8373-c3f4-4723-922b-78eebfbe809d"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Valor Total"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="97" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="d39d2daf-90e2-4304-b0cd-e5f43d258afd"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fecha"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="97" y="0" width="202" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="3a369cf6-0f9c-495c-a813-885e2fafeb73"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cliente"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<componentElement>
+				<reportElement key="" x="0" y="0" width="555" height="20" uuid="2bd59ab9-1838-4cca-8177-dd6cb19e8045"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="paquetes" uuid="913ffa01-c5b2-4248-845d-28f0eaf96811">
+						<datasetParameter name="FECHA_INICIO">
+							<datasetParameterExpression><![CDATA[$P{FECHA_INICIO}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="FECHA_FIN">
+							<datasetParameterExpression><![CDATA[$P{FECHA_FIN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="556" uuid="f3b9b2d1-0f55-44d4-a4fa-41fc332b9540">
+						<jr:tableHeader style="table_TH" height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="396" height="18" uuid="15c336a2-6bf0-4770-ae79-c46615a639cd"/>
+								<box rightPadding="3"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="396" y="0" width="160" height="18" uuid="fd627c9c-7501-473a-91d1-a54f1d10a320"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total}.intValue()]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="table_CH" height="0" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="97" y="0" width="202" height="20" uuid="f8df6d88-8e69-485f-846e-904755ab2e96"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{primer_nombre}+" "+$F{segundo_nombre}+" "+$F{primer_apellido}+" "+$F{segundo_apellido}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="97" height="20" uuid="0dcf4618-9b72-4659-a853-10b94a16f70f"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="396" y="0" width="160" height="20" uuid="39b07a45-3bca-4133-840b-0b657826dcfe"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{valor_total}.intValue()]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="299" y="0" width="97" height="20" uuid="f714821a-e147-4272-abf0-c3d25da88059"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="55">
+			<textField>
+				<reportElement mode="Opaque" x="97" y="10" width="202" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="d8d1c27c-1dff-4cb4-9965-ea2f33f3c1bb"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Producto"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="396" y="10" width="159" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="775c5fae-7361-4db4-9368-4cdfc53cffb4"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Valor"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="" x="0" y="30" width="555" height="20" uuid="6515141e-10d4-4f1f-a94d-3ed27dd4bbc3"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="cafeteria" uuid="bce1cfb2-71ff-4fe0-bab1-b032d44c6a3b">
+						<datasetParameter name="FECHA_INICIO">
+							<datasetParameterExpression><![CDATA[$P{FECHA_INICIO}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="FECHA_FIN">
+							<datasetParameterExpression><![CDATA[$P{FECHA_FIN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="556" uuid="a5624098-562e-4634-84a3-a7c31ea9f697">
+						<jr:tableHeader style="table_TH" height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="396" height="18" uuid="772249f1-138a-4d56-9b27-faaa670956a7"/>
+								<box rightPadding="3"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="396" y="0" width="160" height="18" uuid="b1946b3d-8f76-4a32-91d0-602329f4af6c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total}.intValue()]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="table_CH" height="0" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="97" y="0" width="202" height="20" uuid="5965e4c4-8913-467b-93b4-4c3c13cde795"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="299" y="0" width="97" height="20" uuid="5e2731ed-8f5b-4b98-9ca5-fe602dc93320"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{cantidad}.intValue()]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="396" y="0" width="160" height="20" uuid="011f5c6c-032d-4957-854e-8ba917ab046f"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{valor_total}.intValue()]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="97" height="20" uuid="a04244af-6dc7-48ce-8aae-6e80ee805b8b"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement mode="Opaque" x="299" y="10" width="97" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="838ac622-08c5-4916-a1de-3359f1ed79c8"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cantidad"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="10" width="97" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="3c0954b9-6b25-4ef6-8212-841aeeb55a70"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fecha"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="52">
+			<textField>
+				<reportElement mode="Opaque" x="396" y="8" width="159" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="e6249b50-5d39-4344-9bbe-f51d5562b4af"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Valor"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="" x="0" y="28" width="555" height="20" uuid="b2ca69a4-3b27-459e-abf3-ff51bcee4e67"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="gastos" uuid="1875755a-faf4-44ba-9b87-4d393ee60cd8">
+						<datasetParameter name="FECHA_INICIO">
+							<datasetParameterExpression><![CDATA[$P{FECHA_INICIO}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="FECHA_FIN">
+							<datasetParameterExpression><![CDATA[$P{FECHA_FIN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="556" uuid="267502f9-3555-4179-beb8-c5f12820b319">
+						<jr:tableHeader style="table_TH" height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="396" height="18" uuid="67138dc5-d171-4184-9176-79ef1bbda452"/>
+								<box rightPadding="3"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="396" y="0" width="160" height="18" uuid="f9330d1b-8621-4577-a2e1-3677988bd302"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total}.intValue()]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="table_CH" height="0" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="97" y="0" width="299" height="20" uuid="f93acdb1-e149-43bf-a87d-6120585a1c7d"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="396" y="0" width="160" height="20" uuid="5cf1c397-4100-4959-b488-f2d38d9cba2b"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{valor}.intValue()]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="97" height="20" uuid="5a370e6a-242b-4102-bb2c-fe53a2866b11"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+									<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="8" width="97" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="405016c4-3aa7-4261-8f9f-bf135f25c5cb"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fecha"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="97" y="8" width="299" height="20" forecolor="#FFFFFF" backcolor="#0066CC" uuid="255c7b48-5658-4c9e-825f-1a134a3f4729"/>
+				<box>
+					<topPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.25" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Gasto"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="117">
+			<textField>
+				<reportElement x="0" y="26" width="396" height="18" uuid="c37a0606-5c46-4684-8d93-a77aeeb768bd"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL INGRESOS"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="26" width="160" height="18" uuid="418bafea-f2ef-464f-a5fd-2eae8f928e27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_paquetes}.intValue() + $F{total_cafeteria}.intValue()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="15" width="555" height="1" uuid="83af3d56-0c39-4ca5-b955-b43d1b905b5b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="396" y="54" width="160" height="18" uuid="9b1fb663-896b-4913-99d3-e93011fbff22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_gastos}.intValue()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="54" width="396" height="18" uuid="c1c593d0-3db5-4fb2-acea-b253dadffbba"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL EGRESOS"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="84" width="555" height="1" uuid="12a882eb-43df-4fdb-b213-7b7a3c3b2129"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="85" width="396" height="18" uuid="45ba42ca-a02f-45f1-8922-c55dfbc12b83"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL CAJA"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="85" width="160" height="18" uuid="13893e16-f4b7-4a7d-ad26-b7dfaf7f40c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{total_paquetes}.intValue() + $F{total_cafeteria}.intValue())- ($F{total_gastos}.intValue())]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="12" uuid="0a554c98-1bb7-4a56-8201-4f114408b5c6"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA["reporte generado por: Sistema De gestión Street Gym"]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
